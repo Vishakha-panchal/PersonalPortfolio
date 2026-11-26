@@ -1,75 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2d">
+  <title>Harsh Panchal | Accounting & Tax Executive</title>
+  <meta name="description" content="Harsh Panchal — Accountant and Tax Executive in Ahmedabad, India. Experience with Tally Prime, Excel, accounting records, bank reconciliation, payables, receivables, and GST/TDS support.">
+  <meta property="og:title" content="Harsh Panchal | Accounting & Tax Executive">
+  <meta property="og:description" content="Explore Harsh Panchal's professional profile, experience, education, and accounting skills.">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#101b2d;--navy2:#182943;--ink:#172338;--muted:#65748a;--line:#e2e8f0;--paper:#f7f9fc;--white:#fff;--teal:#087f8c;--teal2:#dff4f2;--gold:#e8b45b;--shadow:0 18px 50px rgba(16,27,45,.09)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 "DM Sans",sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(16,27,45,.96);backdrop-filter:blur(12px);color:white;border-bottom:1px solid rgba(255,255,255,.1)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font:800 1.1rem Manrope,sans-serif;text-decoration:none;letter-spacing:-.04em}
+    .brand span{color:#68d1c8}
+    .navlinks{display:flex;gap:25px;align-items:center}
+    .navlinks a{font-size:.9rem;color:#d7e0ec;text-decoration:none}
+    .navlinks a:hover{color:#75ded4}
+    .nav-cta{padding:9px 16px;border:1px solid rgba(255,255,255,.35);border-radius:9px}
+    .hero{background:var(--navy);color:white;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-150px;top:-260px;background:radial-gradient(circle,rgba(8,127,140,.35),transparent 68%)}
+    .hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:5%;bottom:-260px}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center;padding:92px 0 100px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#8ce0d8;font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:26px;height:2px;background:var(--gold)}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.2}
+    h1{font-size:clamp(2.8rem,7vw,5.3rem);letter-spacing:-.065em;margin:18px 0 12px}
+    .hero h1 span{color:#73d5cc}
+    .role{font:600 clamp(1.1rem,2.4vw,1.45rem) Manrope,sans-serif;color:#d5e1ee;margin:0 0 20px}
+    .hero-copy{max-width:620px;color:#c0ccda;font-size:1.05rem;margin:0 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:#72d4cb;color:#0c2730}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:white}
+    .profile-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.15)}
+    .monogram{width:76px;height:76px;border-radius:20px;background:linear-gradient(135deg,#75d8cf,#d5f4ec);color:#102c35;display:grid;place-items:center;font:800 1.7rem Manrope,sans-serif;margin-bottom:20px}
+    .profile-card h2{font-size:1.15rem;margin:0 0 5px}
+    .profile-card>p{margin:0;color:#b8c7d7;font-size:.9rem}
+    .facts{margin-top:22px;display:grid;gap:13px}
+    .fact{display:flex;justify-content:space-between;gap:14px;border-top:1px solid rgba(255,255,255,.13);padding-top:12px;font-size:.88rem}
+    .fact span:first-child{color:#9eafc1}.fact strong{text-align:right;font-weight:600}
+    section{padding:82px 0}
+    .section-head{max-width:650px;margin-bottom:34px}
+    .kicker{color:var(--teal);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    h2.section-title{font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.05em;margin:8px 0 10px}
+    .section-desc{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .about-copy{font-size:1.06rem;color:#4c5b70}
+    .about-copy strong{color:var(--ink)}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .stat{padding:22px;background:white;border:1px solid var(--line);border-radius:14px}
+    .stat strong{display:block;font:800 1.4rem Manrope;color:var(--teal)}
+    .stat span{font-size:.88rem;color:var(--muted)}
+    .services{background:#fff}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b6dcd8}
+    .icon{width:42px;height:42px;border-radius:12px;background:var(--teal2);color:var(--teal);display:grid;place-items:center;font-size:1.2rem;font-weight:800;margin-bottom:17px}
+    .card h3{font-size:1.08rem;margin:0 0 8px}
+    .card p{font-size:.92rem;color:var(--muted);margin:0}
+    .timeline{border-left:2px solid #cde5e2;margin-left:7px;padding-left:28px}
+    .job{position:relative;padding:0 0 32px}
+    .job:last-child{padding-bottom:0}
+    .job:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--teal);left:-35px;top:7px;box-shadow:0 0 0 5px #e0f2f0}
+    .job-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+    .job h3{font-size:1.18rem;margin:0 0 4px}
+    .company{color:var(--teal);font-weight:700;font-size:.92rem}
+    .date{white-space:nowrap;color:var(--muted);font-size:.85rem;background:#edf2f7;padding:5px 10px;border-radius:20px}
+    .job ul{color:#58677b;padding-left:20px;margin:12px 0 0}
+    .job li{padding:3px 0}
+    .education{background:#fff}
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .edu{padding:22px;border:1px solid var(--line);border-radius:14px}
+    .edu h3{font-size:1.05rem;margin:0 0 5px}
+    .edu p{margin:0;color:var(--muted);font-size:.9rem}
+    .edu .year{display:inline-block;margin-top:12px;color:var(--teal);font-weight:700;font-size:.84rem}
+    .skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:white;border:1px solid #cfe3e1;border-radius:30px;padding:9px 15px;font-size:.9rem;font-weight:600;color:#245b60}
+    .project{background:var(--navy);color:white;border-radius:16px;padding:28px}
+    .project h3{font-size:1.25rem;margin:0 0 9px}
+    .project p{color:#bdcad8;margin:0}
+    .contact{background:linear-gradient(135deg,#e5f5f2,#f2f6fb);text-align:center}
+    .contact-inner{max-width:700px;margin:auto}
+    .contact h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;margin:10px 0}
+    .contact p{color:var(--muted);margin:0 auto 25px}
+    .contact .btn-primary{background:var(--navy);color:white}
+    .email-note{display:block;color:var(--muted);font-size:.86rem;margin-top:14px}
+    footer{background:var(--navy);color:#aebdce;padding:25px 0;font-size:.86rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .footer-inner a{color:#78d7ce;text-decoration:none}
+    @media(max-width:800px){.hero-inner{grid-template-columns:1fr;gap:35px;padding:65px 0}.profile-card{max-width:500px}.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.skills-layout{grid-template-columns:1fr;gap:25px}}
+    @media(max-width:600px){.wrap{width:min(100% - 30px,1120px)}.nav{height:auto;min-height:66px;align-items:flex-start;flex-direction:column;padding:13px 0}.navlinks{width:100%;gap:17px;overflow-x:auto;padding-bottom:4px}.navlinks a{white-space:nowrap;font-size:.82rem}.nav-cta{display:none}.hero-inner{padding:54px 0 65px}.cards,.edu-grid{grid-template-columns:1fr}section{padding:62px 0}.job-top{display:block}.date{display:inline-block;margin-top:9px}.stats{gap:10px}.stat{padding:17px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
 </head>
 <body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#home">HARSH<span>.</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#services">What I do</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="mailto:harshpanchal7748@gmail.com">Let's connect ↗</a>
+  </div>
+</header>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h2 class="logo">MyPortfolio</h2>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#gallery">portfolio</a></li>
-                </ul>
-            </nav>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Professional portfolio · Ahmedabad, India</div>
+        <h1>Harsh <span>Panchal</span></h1>
+        <p class="role">Accountant &amp; Tax Executive</p>
+        <p class="hero-copy">I work with accounting records, reconciliations and financial reports, using Tally Prime and Microsoft Excel. I’m also pursuing my MBA at Gujarat Technological University.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:harshpanchal7748@gmail.com">✉ Email me</a>
+          <a class="btn btn-outline" href="#experience">Explore my experience ↓</a>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm John Doe</h1>
-            <p>Frontend Developer | UI Designer | Freelancer</p>
-            <a href="#gallery" class="btn">View Portfolio</a>
+      </div>
+      <aside class="profile-card" aria-label="Profile summary">
+        <div class="monogram" aria-hidden="true">HP</div>
+        <h2>Accounting professional</h2>
+        <p>Focused on accurate records and organised financial information.</p>
+        <div class="facts">
+          <div class="fact"><span>Based in</span><strong>Ahmedabad, India</strong></div>
+          <div class="fact"><span>Current workplace</span><strong>P A Parekh &amp; Co.</strong></div>
+          <div class="fact"><span>Education</span><strong>MBA · GTU (pursuing)</strong></div>
+          <div class="fact"><span>Languages</span><strong>English · Hindi · Gujarati</strong></div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am a passionate web developer who enjoys creating responsive,
-                modern, and user-friendly websites using HTML, CSS, and JavaScript.
-                I love learning new technologies and building beautiful web
-                applications.
-            </p>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Portfolio Gallery</h2>
-
-            <div class="gallery">
-
-                <img src="https://picsum.photos/id/1015/400/300" alt="">
-                <img src="https://picsum.photos/id/1016/400/300" alt="">
-                <img src="https://picsum.photos/id/1018/400/300" alt="">
-                <img src="https://picsum.photos/id/1020/400/300" alt="">
-                <img src="https://picsum.photos/id/1024/400/300" alt="">
-                <img src="https://picsum.photos/id/1025/400/300" alt="">
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Popup -->
-    <div class="popup" id="popup">
-        <span class="close">&times;</span>
-        <img id="popup-img" src="" alt="">
+      </aside>
     </div>
+  </section>
 
-    <script src="main.js"></script>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">A little about me</div><h2 class="section-title">Reliable work. Clear numbers.</h2><p class="section-desc">A quick introduction to my professional background and the work I enjoy.</p></div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I am an <strong>Accountant and Tax Executive</strong> based in Ahmedabad, currently working at <strong>P A Parekh &amp; Co.</strong> My day-to-day work includes Tally Prime data entry, Excel reporting, bank reconciliation, payables and receivables, and support with GST and TDS-related work.</p>
+          <p>Alongside my professional experience, I am pursuing an MBA. I’m interested in strengthening my accounting, reporting and analytical skills through practical work and continuous learning.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Tally Prime</strong><span>Accounting software</span></div>
+          <div class="stat"><strong>Microsoft Excel</strong><span>Reports &amp; data work</span></div>
+          <div class="stat"><strong>GST &amp; TDS</strong><span>Working knowledge / support</span></div>
+          <div class="stat"><strong>MBA</strong><span>Currently pursuing at GTU</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">What I do</div><h2 class="section-title">Areas of experience</h2><p class="section-desc">Accounting and office-support tasks I have handled in my roles.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">▤</div><h3>Tally Prime</h3><p>Recording day-to-day transactions and maintaining accounting records.</p></article>
+        <article class="card"><div class="icon">↔</div><h3>Bank reconciliation</h3><p>Matching bank statements with books and identifying differences.</p></article>
+        <article class="card"><div class="icon">₹</div><h3>Payables &amp; receivables</h3><p>Tracking amounts payable and receivable and maintaining related records.</p></article>
+        <article class="card"><div class="icon">▦</div><h3>Excel reporting</h3><p>Preparing accounting reports and supporting financial data work.</p></article>
+        <article class="card"><div class="icon">✓</div><h3>GST &amp; TDS support</h3><p>Assisting with routine GST and TDS-related accounting work.</p></article>
+        <article class="card"><div class="icon">⌁</div><h3>Banking &amp; salary work</h3><p>Handling online banking-related work and salary processing support.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Career journey</div><h2 class="section-title">Work experience</h2><p class="section-desc">My professional experience in accounting and office operations.</p></div>
+      <div class="timeline">
+        <article class="job">
+          <div class="job-top"><div><h3>Accountant &amp; Tax Executive</h3><div class="company">P A Parekh &amp; Co.</div></div><span class="date">Jul 2025 – Present</span></div>
+          <ul><li>Tally Prime data entry and accounting-related Excel work.</li><li>Net banking and salary processing support.</li><li>Assisting with reports and reconciliations.</li></ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Accounting / Excel Support</h3><div class="company">Hitech Healthcare Laboratory &amp; Research Center</div></div><span class="date">Apr 2025 – Jul 2025</span></div>
+          <ul><li>Handled basic Excel operations for accounting.</li><li>Worked on Tally Prime data entry.</li></ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Accounting Assistant</h3><div class="company">Haresh Patel &amp; Co.</div></div><span class="date">Jun 2023 – Feb 2024</span></div>
+          <ul><li>Tally Prime data entry and financial record keeping.</li><li>Accounts payable and receivable, and bank reconciliation.</li><li>Supported senior accountants with daily transactions and Excel reports.</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Academic background</div><h2 class="section-title">Education</h2><p class="section-desc">My academic qualifications and current studies.</p></div>
+      <div class="edu-grid">
+        <article class="edu"><h3>MBA (Pursuing)</h3><p>D.L. Patel Institute of Management &amp; Technology · Gujarat Technological University</p><span class="year">2025 – Present</span></article>
+        <article class="edu"><h3>Bachelor of Commerce (B.Com)</h3><p>Hemchandracharya North Gujarat University</p><span class="year">2022 – 2025 · SPI 7.4</span></article>
+        <article class="edu"><h3>Higher Secondary (HSC)</h3><p>K. N. Shah School, Modasa · GSEB</p><span class="year">2021 – 2022 · 75%</span></article>
+        <article class="edu"><h3>Secondary (SSC)</h3><p>Shree N.U. Biyola P.V.M. High School, Isari · GSEB</p><span class="year">2019 – 2020 · 67%</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Tools &amp; learning</div><h2 class="section-title">Skills and academic project</h2></div>
+      <div class="skills-layout">
+        <div><h3>Skills</h3><div class="skill-list"><span class="skill">Tally Prime</span><span class="skill">Microsoft Excel</span><span class="skill">Accounting principles</span><span class="skill">Microsoft Word</span><span class="skill">GST basics</span><span class="skill">TDS basics</span><span class="skill">Bank reconciliation</span><span class="skill">Accounts payable &amp; receivable</span></div></div>
+        <article class="project"><div class="kicker">MBA academic project</div><h3>Working Capital Management</h3><p>Studying the concept and importance of working capital, factors affecting working capital requirements, and working capital management techniques.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="kicker">Get in touch</div>
+      <h2>Let’s connect.</h2>
+      <p>For professional opportunities, accounting-related discussions or to know more about my experience, feel free to contact me by email.</p>
+      <a class="btn btn-primary" href="mailto:harshpanchal7748@gmail.com">✉ harshpanchal7748@gmail.com</a>
+      <span class="email-note">Ahmedabad, Gujarat, India</span>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Harsh Panchal. All rights reserved.</span><a href="#home">Back to top ↑</a></div></footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
